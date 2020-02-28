@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,102 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="1Et-kD-her">
+                                <rect key="frame" x="-11" y="0.0" width="434" height="902"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5F-hW-zU7">
+                                <rect key="frame" x="64.5" y="502.5" width="285" height="69"/>
+                                <state key="normal" title="sign in with email " backgroundImage="Email"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xw3-He-SyW">
+                                <rect key="frame" x="64.5" y="413.5" width="285" height="69"/>
+                                <state key="normal" title="sign in with google " backgroundImage="Google"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8c-aT-7Oq">
+                                <rect key="frame" x="64.5" y="324.5" width="285" height="69"/>
+                                <state key="normal" title="sign in with facebook" backgroundImage="FB">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login or create account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maZ-Ie-MR8">
+                                <rect key="frame" x="109" y="276.5" width="196" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mobinWeather" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYv-dt-ibW">
+                                <rect key="frame" x="122.5" y="210" width="169.5" height="33"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xw3-He-SyW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1c0-Uv-uio"/>
+                            <constraint firstItem="xw3-He-SyW" firstAttribute="top" secondItem="T8c-aT-7Oq" secondAttribute="bottom" constant="20" id="71t-qh-Qfc"/>
+                            <constraint firstItem="C5F-hW-zU7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fhd-Eg-trq"/>
+                            <constraint firstItem="T8c-aT-7Oq" firstAttribute="top" secondItem="maZ-Ie-MR8" secondAttribute="bottom" constant="25" id="K2Q-KM-4oa"/>
+                            <constraint firstItem="maZ-Ie-MR8" firstAttribute="top" secondItem="uYv-dt-ibW" secondAttribute="bottom" constant="33.5" id="Ote-fw-9NZ"/>
+                            <constraint firstItem="C5F-hW-zU7" firstAttribute="top" secondItem="xw3-He-SyW" secondAttribute="bottom" constant="20" id="QiE-5z-Jra"/>
+                            <constraint firstItem="uYv-dt-ibW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TdX-od-SRR"/>
+                            <constraint firstItem="maZ-Ie-MR8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UTW-B9-M73"/>
+                            <constraint firstItem="xw3-He-SyW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9t-KS-hJB"/>
+                            <constraint firstItem="T8c-aT-7Oq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vYc-0O-4FG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DL5-aZ-BrI">
+            <objects>
+                <viewController id="Qga-Ij-O68" customClass="ViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xnT-BO-x4m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lesson 02 Bonus Training Image" translatesAutoresizingMaskIntoConstraints="NO" id="tBx-tS-yRF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-8g-gyf">
+                                <rect key="frame" x="0.0" y="593" width="414" height="269"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75449486301369861" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tBx-tS-yRF" firstAttribute="leading" secondItem="5US-tw-Oeu" secondAttribute="leading" id="7fn-e4-4ee"/>
+                            <constraint firstItem="5US-tw-Oeu" firstAttribute="trailing" secondItem="bMg-8g-gyf" secondAttribute="trailing" id="Qez-BE-c3a"/>
+                            <constraint firstAttribute="bottom" secondItem="tBx-tS-yRF" secondAttribute="bottom" id="bvN-W5-xLk"/>
+                            <constraint firstItem="bMg-8g-gyf" firstAttribute="height" secondItem="xnT-BO-x4m" secondAttribute="height" multiplier="0.3" id="gRW-DF-h0D"/>
+                            <constraint firstItem="tBx-tS-yRF" firstAttribute="top" secondItem="5US-tw-Oeu" secondAttribute="top" id="poS-3B-JGA"/>
+                            <constraint firstItem="bMg-8g-gyf" firstAttribute="leading" secondItem="5US-tw-Oeu" secondAttribute="leading" id="se1-O6-pic"/>
+                            <constraint firstItem="5US-tw-Oeu" firstAttribute="bottom" secondItem="bMg-8g-gyf" secondAttribute="bottom" id="tA5-Ih-CEI"/>
+                            <constraint firstItem="5US-tw-Oeu" firstAttribute="trailing" secondItem="tBx-tS-yRF" secondAttribute="trailing" id="xrF-rA-VoM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5US-tw-Oeu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixl-U7-dv2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086.9565217391305" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="Email" width="285" height="69"/>
+        <image name="FB" width="285" height="69"/>
+        <image name="Google" width="285" height="69"/>
+        <image name="Lesson 02 Bonus Training Image" width="2005" height="1085"/>
+    </resources>
 </document>
